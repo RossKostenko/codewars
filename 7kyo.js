@@ -4,3 +4,13 @@ function highAndLow(numbers){
   let result = numbers.split(' ');
   return `${Math.max(...result)} ${Math.min(...result)}`;
 }
+
+// Vowel Count
+// https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/javascript
+function getCount(string) {
+  let regExp = /[aeiou]/ig;
+  let arr = string.match(regExp);
+  return (arr === null) 
+  ? 0 
+  : arr.length
+}
