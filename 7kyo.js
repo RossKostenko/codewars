@@ -19,3 +19,28 @@ function getCount(string) {
   ? 0 
   : arr.length
 }
+
+// Multiples of 3 or 5
+// https://www.codewars.com/kata/514b92a657cdc65150000006/train/javascript
+// Recursion
+function solution(number){
+  let result = 0;
+  for (let i = 0; i < number; i++) {
+      if (i % 3 === 0 || i % 5 === 0) {
+         result += i;
+      }
+  } 
+  return result;
+}
+
+// Simple Way
+
+function solution(number){
+  let result = 0;
+  for (let i = 0; i < number; i++) {
+      if (i % 3 === 0 || i % 5 === 0) {
+         result += i;
+      }
+  } 
+  return result;
+}
