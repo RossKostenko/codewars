@@ -20,4 +20,12 @@ function getCount(string) {
   : arr.length
 }
 
+// Square Every Digit
+// https://www.codewars.com/kata/546e2562b03326a88e000020/solutions/javascript
+
+function squareDigits(num){
+  let arr = String(num).split('');
+  let str = arr.map(element => Math.pow(element, 2)).join('');
+  return Number(str);
+}
 
