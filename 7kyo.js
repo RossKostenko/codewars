@@ -29,3 +29,6 @@ function squareDigits(num){
   return Number(str);
 }
 
+// Chuck Norris II - One Punch
+// https://www.codewars.com/kata/57057a035eef1f7e790009ef/train/javascript
+const onePunch = (s) => (typeof(s) !== "string" || s.length === 0) ? "Broken!" : s.split(' ').sort().map(x => x.replace(/[ae]/ig,'')).join(' ');
