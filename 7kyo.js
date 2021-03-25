@@ -32,3 +32,9 @@ function squareDigits(num){
 // Chuck Norris II - One Punch
 // https://www.codewars.com/kata/57057a035eef1f7e790009ef/train/javascript
 const onePunch = (s) => (typeof(s) !== "string" || s.length === 0) ? "Broken!" : s.split(' ').sort().map(x => x.replace(/[ae]/ig,'')).join(' ');
+
+// Get the Middle Character
+// https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript
+const getMiddle = (s) => s.length % 2 
+                    ? s[Math.floor(s.length/2)]
+                    : s[s.length/2 - 1 ] + s[s.length/2];
