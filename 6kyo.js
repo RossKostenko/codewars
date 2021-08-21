@@ -64,3 +64,12 @@ function isValidWalk(walk) {
     const check = dirX === 0 && dirY === 0 && walk.length === 10;
     return check ? true : false;
 }
+
+// Create Phone Number
+const createPhoneNumber = numbers => {
+  let format = "(xxx) xxx-xxxx";
+  
+  numbers.forEach( num => format = format.replace('x', num))
+
+  return format;
+}
