@@ -78,5 +78,26 @@ const createPhoneNumber = numbers => {
 // https://www.codewars.com/kata/585d7d5adb20cf33cb000235/
 const findUniq = arr => arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
 
+// Highest Scoring Word
+// https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/javascript
+const letterScore = letter => {
+  const alphabet = ' abcdefghijklmnopqrstuvwxyz';
+  return alphabet.indexOf(letter);
+}
 
+const wordScore = word => 
+    word.split('').reduce((reducer, letter) => reducer + letterScore(letter), 0)
 
+const high = string => {
+  let result;
+  let reducer = 0;
+
+  string.split(' ').forEach( el => {
+    if (wordScore(el) > reducer) {
+      reducer = wordScore(el)
+      result = el;
+    }
+  })
+
+  return result
+}
