@@ -26,3 +26,19 @@ const sortArray = array => {
   return array.map( num => num % 2 ? oddArr.shift() : num);
 }
 
+// Equal Sides Of An Array
+const findEvenIndex = arr => {
+  
+  for (let i = 0; i < arr.length; i++) {
+    
+    const sumLeft = arr.reduce((a, b, currIdx) => 
+        currIdx > i ? a + b : a, 0);
+    const sumRight = arr.reduce((a, b, currIdx) => 
+        currIdx < i ? a + b : a, 0);
+    
+    if (sumLeft === sumRight) {
+      return i;
+    } 
+  }
+  return -1;
+}
