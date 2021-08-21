@@ -42,3 +42,25 @@ const findEvenIndex = arr => {
   }
   return -1;
 }
+
+// Take a Ten Minute Walk
+function isValidWalk(walk) {
+  let dirX = 0;
+  let dirY = 0;
+  walk.forEach(direction => {
+    switch(direction) {
+      case 'n':
+        dirX += 1;
+        break;
+      case 's':
+        dirX -= 1;
+        break;
+      case 'w':
+        dirY += 1;
+        break;
+      default: 
+        dirY -= 1;
+    }})
+    const check = dirX === 0 && dirY === 0 && walk.length === 10;
+    return check ? true : false;
+}
