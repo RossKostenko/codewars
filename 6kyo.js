@@ -18,3 +18,11 @@ function allContinents(list) {
   return ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
             .every(opt => list.some(employee => opt === employee.continent));
 }
+
+// Sort the odd
+// https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/javascript
+const sortArray = array => {
+  const oddArr = array.filter( num => num % 2).sort((a,b) => a - b);
+  return array.map( num => num % 2 ? oddArr.shift() : num);
+}
+
