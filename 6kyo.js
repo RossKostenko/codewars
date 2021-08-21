@@ -101,3 +101,22 @@ const high = string => {
 
   return result
 }
+
+// Two Sum
+// https://www.codewars.com/kata/52c31f8e6605bcc646000082/train/javascript
+
+const twoSum = (numbers, target) => {
+
+  let secondI = null;
+
+  for (let i = 0; i < numbers.length; i++) {
+     const second = numbers.find((element, index) => {
+        const check = ((element + numbers[i] === target) && (index !== i))
+
+        if (check) {secondI = index}
+
+        return check
+     })
+     if (second) return [i, secondI]
+  }
+}
