@@ -155,3 +155,13 @@ const getLengthOfMissingArray = arrayOfArrays => {
     if (lengthArr[i] - lengthArr[i - 1] === 2) return lengthArr[i] - 1
   }
 }
+
+// Your order, please
+// https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/javascript
+
+const getNuberFromWord = word => Number(word.match(/\d/)[0])
+
+const order = words => {
+  let arr = words.split(' ').sort((a,b) => getNuberFromWord(a) - getNuberFromWord(b));
+  return words ? arr.join(' ') : ''
+}
