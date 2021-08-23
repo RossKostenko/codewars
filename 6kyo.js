@@ -133,3 +133,25 @@ const likes = names => {
     default: return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
   }
 }
+
+
+// Length of missing array
+// https://www.codewars.com/kata/57b6f5aadb5b3d0ae3000611/train/javascript
+const getLengthOfMissingArray = arrayOfArrays => {
+  if (arrayOfArrays === null || arrayOfArrays.length === 0) return 0
+  
+  let lengthArr = [];
+
+  for (let i = 0; i < arrayOfArrays.length; i++) {
+    const check = !Boolean(arrayOfArrays[i]) || !arrayOfArrays[i].length;
+    if (check) return 0;
+
+    lengthArr.push(arrayOfArrays[i].length)
+  }
+
+  lengthArr = lengthArr.sort((a, b) => a - b);
+
+  for (let i = 1; i < lengthArr.length; i++) {
+    if (lengthArr[i] - lengthArr[i - 1] === 2) return lengthArr[i] - 1
+  }
+}
