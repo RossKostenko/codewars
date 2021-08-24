@@ -165,3 +165,17 @@ const order = words => {
   let arr = words.split(' ').sort((a,b) => getNuberFromWord(a) - getNuberFromWord(b));
   return words ? arr.join(' ') : ''
 }
+
+// Find the odd int
+// https://www.codewars.com/kata/54da5a58ea159efa38000836/solutions/javascript
+
+const findOdd = arr => {
+    for (const number of arr) {
+        const check = arr.filter(el => el === number).length % 2 === 1
+        if (check) {
+            return number
+        }
+    }
+}
+
+
